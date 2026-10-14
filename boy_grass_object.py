@@ -28,8 +28,13 @@ class Boy:
         self.frame = (self.frame + 1) % 8
         self.x += 5
 
-
-
+class Ball:
+    def __init__(self):
+        pass
+    def update(self):
+        pass
+    def draw(self):
+        pass
 # class Zombie:
 #     def __init__(self):
 #         self.x = 100
