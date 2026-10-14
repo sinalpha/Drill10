@@ -30,9 +30,9 @@ class Boy:
 
 class Ball:
     def __init__(self):
-        sel = random.randint(0, 1)
+        self.sel = random.randint(0, 1)
 
-        if sel == 0:
+        if self.sel == 0:
             self.image = load_image('ball21x21.png')
         else:
             self.image = load_image('ball41x41.png')
@@ -44,6 +44,12 @@ class Ball:
     def update(self):
         self.y += self.v
 
+        if self.sel== 0:
+            bound = 21
+        else:
+            bound = 41 
+        if self.y  >= 600 - (bound / 2):
+            self.y = 600 - (bound/2)
 
     def draw(self):
         self.image.draw(self.x, self.y)
