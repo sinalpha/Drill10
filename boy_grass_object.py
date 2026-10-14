@@ -31,14 +31,14 @@ class Boy:
 class Ball:
     def __init__(self):
         self.image = load_image('ball21x21.png')
-        self.x = random.randint(0, 400)
-        self.y = 30
+        self.x = random.randint(50, 750)
+        self.y = 60
 
     def update(self):
         pass
 
     def draw(self):
-        self.image.draw(50, 60)
+        self.image.draw(self.x, self.y)
 
 
 # class Zombie:
