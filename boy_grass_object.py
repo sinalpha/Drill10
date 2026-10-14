@@ -30,13 +30,20 @@ class Boy:
 
 class Ball:
     def __init__(self):
-        self.image = load_image('ball21x21.png')
+        sel = random.randint(0, 1)
+
+        if sel == 0:
+            self.image = load_image('ball21x21.png')
+        else:
+            self.image = load_image('ball41x41.png')
+
         self.x = random.randint(50, 750)
         self.y = 60
         self.v = random.randint(1, 10)
 
     def update(self):
         self.y += self.v
+
 
     def draw(self):
         self.image.draw(self.x, self.y)
