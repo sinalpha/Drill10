@@ -33,9 +33,10 @@ class Ball:
         self.image = load_image('ball21x21.png')
         self.x = random.randint(50, 750)
         self.y = 60
+        self.v = random.randint(1, 10)
 
     def update(self):
-        pass
+        self.y += self.v
 
     def draw(self):
         self.image.draw(self.x, self.y)
