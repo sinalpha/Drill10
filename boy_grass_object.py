@@ -40,6 +40,7 @@ class Ball:
         self.x = random.randint(50, 750)
         self.y = 60
         self.v = random.randint(1, 10)
+        self.mode = 0
 
     def update(self):
         self.y += self.v
@@ -49,7 +50,8 @@ class Ball:
         else:
             bound = 41 
         if self.y  >= 600 - (bound / 2):
-            self.y = 600 - (bound/2)
+            self.y = 600 - 2 * (bound/2)
+
 
     def draw(self):
         self.image.draw(self.x, self.y)
