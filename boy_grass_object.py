@@ -35,6 +35,8 @@ class Ball:
         pass
     def draw(self):
         pass
+
+
 # class Zombie:
 #     def __init__(self):
 #         self.x = 100
@@ -75,6 +77,8 @@ def reset_world():
     team = [Boy() for i in range(11)]
     world += team
 
+    ball = [Ball() for i in range(20)]
+    world += ball
     # zombie = Zombie()
     # world.append(zombie)
 
